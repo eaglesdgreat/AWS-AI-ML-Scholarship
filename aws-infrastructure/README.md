@@ -136,3 +136,16 @@ To ensure redundancy and high availability, AWS generative AI services can be de
 
 ### Performance
 AWS offers different compute options (for example, CPU, GPU, and custom hardware accelerators) for generative AI services. Higher-performance options, such as GPU instances, generally come at a higher cost but can provide significant performance improvements for certain workloads.
+
+### Token-based pricing
+Many AWS generative AI services, such as Amazon Q Developer and Amazon Bedrock, use a token-based pricing model. This means that you pay for the number of tokens (a unit of text or code) generated or processed by the service. The more tokens you generate or process, the higher the cost.
+
+### Provisioned throughput
+Some AWS generative AI services, like Amazon Polly and Amazon Transcribe, let you provision a specific amount of throughput (for example, audio or text processing capacity) in advance. Higher provisioned throughput levels typically come at a higher cost but can ensure predictable performance for time-sensitive workloads.
+
+### Custom models
+AWS provides pre-trained models for various generative AI tasks, but you can also bring your own custom models or fine-tune existing models. Training and deploying custom models can incur additional costs, depending on the complexity of the model, the training data, and the compute resources required.
+
+It's important to carefully evaluate your specific requirements and workloads when choosing AWS services. Factors like those listed previously, can significantly impact the overall cost and performance.
+
+By understanding these cost considerations, you can make informed decisions and optimize your AWS AI deployments to balance cost, performance, and other requirements effectively.
