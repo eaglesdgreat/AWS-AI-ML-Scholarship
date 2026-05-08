@@ -59,3 +59,25 @@ AI contributes to manufacturing in the following ways:
 
 ### Examples of AI Applications
 AI applications and other AWS services automate processes across various industries. Some of the applications include computer vision, natural language processing (NLP), intelligent document processing (IDP), and fraud detection. These applications are used in various industries, from healthcare to finance to retail. These AI applications aim to enhance customer experiences, boost employee productivity, and improve business operations.
+
+#### Computer vision
+Computer vision is a field of artificial intelligence that allows computers to interpret and understand digital images and videos. Deep learning has revolutionized computer vision by providing powerful techniques for tasks such as image classification, object detection, and image segmentation.
+
+Computer vision is used by but not limited to the following industries.
+
+* **Autonomous Driving:** Auto manufactures can use computer vision technology to make self-driving cars safer and more reliable. **Business value:** Enhance customer experience
+
+* **Healthcare Or Medical Imaging:** Using computer vision in healthcare can improve the accuracy and speed of medical diagnoses, which leads to better treatment outcomes and increased life expectancy for patients. **Business value:** Improve business operations
+
+* **Public Safety And Home Security:** Computer vision image and facial recognition can swiftly identify unlawful entries or persons of interest, which fosters safer communities and works as a crime deterrent. **Business value:** Enhance customer experience
+
+#### Natural language processing
+NLP is a branch of artificial intelligence that deals with the interaction between computers and human languages. Deep learning has made significant strides in NLP. It can perform tasks such as text classification, sentiment analysis, machine translation, and language generation.
+
+NLP is used by but not limited to the following industries.
+
+* **Insurance:** Insurance companies can use NLP to extract policy numbers, expiration dates, and other personal information. **Business value:** Sensitive data redaction
+
+* **Telecommunication:** Telecommunication companies use NLP to analyze customer text messages and suggest personalized recommendations. **Business value:** Customer engagement
+
+* **Education:** In the education industry, students use Q&A chatbot to address questions. **Business value:** Enhance student experience and engagement
