@@ -81,3 +81,21 @@ NLP is used by but not limited to the following industries.
 * **Telecommunication:** Telecommunication companies use NLP to analyze customer text messages and suggest personalized recommendations. **Business value:** Customer engagement
 
 * **Education:** In the education industry, students use Q&A chatbot to address questions. **Business value:** Enhance student experience and engagement
+
+#### Intelligent document processing
+IDP is an application that extracts and classifies information from unstructured data, generates summaries, and provides actionable insights.
+
+IDP is used by but not limited to the following industries.
+
+* **FInancial Services Or Lending:** Financial services use IDP to extract important information from mortgage applications to accelerate customer response time. It also helps with the underwriting process by identifying incomplete loan packages, tax forms, pay stubs, and other missing data. **Business value:** Improve business operations, automation
+
+* **Legal:** IDP, along with other applications such as optical character recognition (OCR) and NLP, helps eliminate the manual effort of processing documents such as contractual documents, agreements, court filings, and legal dockets. **Business value:** Improve business operations
+
+* **HealthCare:** Using IDP in healthcare can help expedite business quickly and accurately by processing various document types, such as claims and doctor’s notes. **Business value:** Improve business operations
+
+#### Fraud detection
+Fraud detection refers to the process of identifying and preventing fraudulent activities or unauthorized behavior with a system, process, or transaction.
+
+Fraud detection is used by but not limited to the following industries.
+
+* **Financial services:** Financial services use fraud detection for identity verification, payment fraud detection, transaction surveillance, and anti-money laundering (AML) sanctions. **Business value:** Improve business operations
