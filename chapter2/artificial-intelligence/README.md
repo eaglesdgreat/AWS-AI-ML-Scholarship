@@ -99,3 +99,13 @@ Fraud detection refers to the process of identifying and preventing fraudulent a
 Fraud detection is used by but not limited to the following industries.
 
 * **Financial services:** Financial services use fraud detection for identity verification, payment fraud detection, transaction surveillance, and anti-money laundering (AML) sanctions. **Business value:** Improve business operations
+
+* **Retail:** Fraud detection systems in the retail industry protect businesses from financial losses, safeguard customer accounts and data, and maintain trust and confidence in online transactions. **Business value:** Improve business operations
+
+* **Telecommunication:** The telecommunication industry uses fraud detection to identify any fraudulent activities in any of the following areas:
+
+* Telecom: Roaming, premium rate service, and subscription fraud
+* Online: New account fraud, claims processing fraud, and promotion abuse
+* Retail: Credit card and online retail fraud
+
+**Business value:** Improve business operations
