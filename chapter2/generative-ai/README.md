@@ -114,3 +114,83 @@ There are many model types. The following list is a non-exhaustive list of model
 * **Financial services** – summarize lengthy documents
 * **Retail** – generate product descriptions
 
+### Amazon
+#### Amazon Titan
+
+**Tasks**
+* Text summarization
+* Classification
+* Open-ended Q&A
+* Information extraction
+* Embeddings
+* Search
+
+**Use Cases**
+* **Advertising** – create studio quality images
+* **Customer service** – generate real-time abstract summaries
+
+### Anthropic
+#### Claude
+
+**Tasks**
+* Content generation
+* Text translation
+* Question answering
+* Text summarization
+* Code explanation and generation
+
+**Use Cases**
+* **Developer** – code generation and debugging
+* **Legal** – parse legal documents and answer questions
+
+### Stability AI
+#### Stable Diffusion
+
+**Tasks**
+* Generate photo realistic images from text input
+* Improve quality of generated images
+
+**Use Cases**
+* **Gaming and metaverse** – create characters, scenes, and worlds
+* **Advertising and marketing** – create ad campaigns and marketing assets
+
+### Cohere
+#### Command
+
+**Tasks**
+* Text generation
+* Information extraction
+* Question and answering
+* Summarization
+
+**Use Cases**
+* **Customer service** – support chatbots
+* **Retail** – provide product descriptions
+* **Healthcare** – summarize key ideas from long text
+
+### Meta
+#### Llama
+
+**Tasks**
+* Question answering
+* Chat
+* Summarization
+* Paraphrasing
+* Sentiment analysis
+* Text generation
+
+**Use Cases**
+* **Customer service support** – chatbots
+
+
+## Performance requirements
+Performance requirements are another factor to consider when selecting a generative AI model. These requirements include accuracy, reliability of the output, and others. Assess the overall performance of the model to evaluate its suitability for a particular task. You should also test the model against different datasets to ensure reliability. Finally, monitor its performance over time to ensure it remains consistent.
+
+## Constraints
+Consider the constraints of a model such as the following: 
+
+* Computational resources (for example, available GPU power, CPU power, or memory)
+* Data availability (for example, size and quality of training data)
+* Deployment requirement (for example, on premises or cloud)
+
+Some models might have higher resource demands or require specific hardware configurations, which could impact their use case.
