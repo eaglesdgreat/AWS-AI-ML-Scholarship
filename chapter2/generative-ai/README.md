@@ -194,3 +194,55 @@ Consider the constraints of a model such as the following:
 * Deployment requirement (for example, on premises or cloud)
 
 Some models might have higher resource demands or require specific hardware configurations, which could impact their use case.
+
+## Capabilities
+Another factor to consider is the model's capabilities. Generative AI encompasses a wide range of capabilities. It can perform different tasks with varying degrees of output quality and levels of control or customization. For instance, some models might be better at generating text, whereas others might excel at generating images or performing multimodal tasks such as text-to-image generation. Therefore, it is important to understand the specific capabilities required for your application before selecting a generative AI model.
+
+## Compliance
+Compliance is another factor. Generative AI models can pose moral concerns, including biases, privacy issues, and potential misuse. When evaluating a particular model, consider its compliance and moral implications, particularly in sensitive domains like healthcare, finance, and legal applications. One should consider factors such fairness, transparency or traceability, accountability, hallucination, and toxicity. Additionally, the model should adhere to relevant regulations and ethical guidelines.
+
+## Cost
+Another key factor is cost. Generative AI models can vary in terms of cost. Consider the trade-off between the size and the speed of the model. Larger models are usually more precise, but they are expensive and offer few deployment options. Conversely, smaller models are cheaper and faster, and they offer more deployment alternatives.
+
+By using generative AI for content creation, you can reduce labor costs and increase efficiency, especially for repetitive tasks that require significant human effort.
+
+Remember to evaluate all expenses related to deployment, maintenance, hardware, software, and other associated costs.
+
+
+# Business Metrics for Generative AI
+Deploying AI applications has become increasingly prevalent. Organizations have unprecedented opportunities for innovation, efficiency, and growth. However, the success of the AI initiative hinges not only on the sophistication of the underlying algorithms but also on their tangible impact on key business objectives. By quantifying the performance, effectiveness, and return on investment (ROI) of AI applications through relevant business metrics, organizations can gain valuable insights into the value delivered. They can also identify areas of improvement and make informed decisions to optimize resource allocation and strategy.
+
+The business metrics you use to measure the success of your model can vary depending on the use case. To review a non-exhaustive list of business metrics for generative AI, read the following points below
+
+* **User satisfaction:** User satisfaction gathers user feedback to assess their satisfaction with the AI-generated content or recommendations.
+
+*Use case:* Measuring and improving user satisfaction for an e-commerce website.
+
+An e-commerce company wants to monitor and enhance the overall user satisfaction with its website to increased customer loyalty, repeat purchases, and positive word-of-mouth.
+
+* **Average revenue per user:** Average revenue per user (ARPU) calculates the average revenue generated per user or customer attributed to the generative AI application.
+
+*Use case:* Analyzing and optimizing revenue generation per user 
+
+The marketing and product teams at an e-commerce company want to understand how effectively they are monetizing their user base and identify opportunities for improvement.
+
+* **Cross-domain performance:** Cross-domain performance measures the generative AI model's ability to perform effectively across different domains or industries.
+
+*Use case:* Monitoring and optimizing a multidomain e-commerce platform 
+
+AnyCompany operates a large e-commerce platform with multiple domains catering to different product categories and geographic regions. They use the cross-domain performance metric to monitor the overall performance of their e-commerce platform across all domains.
+
+* **Conversion rate:** Conversion rate monitors the conversion rate to generate content or recommend desired outcomes, such as purchases, sign-ups, or engagement metrics.
+
+*Use case:* Optimizing an e-commerce website for higher conversion rates 
+
+A marketing manager for an online clothing store is responsible for analyzing and improving the website's performance in terms of converting visitors into paying customers. To do this, they closely monitor the conversion rate metric, which measures the percentage of website visitors who complete a desired action, such as making a purchase.
+
+* **Efficiency:** The efficiency metric evaluates the generative AI model's efficiency in resource utilization, computation time, and scalability.
+
+Use case: Improving production line efficiency 
+
+Example Corp Manufacturing Company operates a production line for assembling electronic devices. The company aims to optimize the efficiency of its production line to reduce costs and increase productivity.
+
+
+*Note:* By monitoring these business metrics, organizations can effectively evaluate generative AI applications' performance, effectiveness, and ROI. They can use generative AI to guide strategic decision-making and optimization efforts and maximize business value.
