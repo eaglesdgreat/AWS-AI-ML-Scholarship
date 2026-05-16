@@ -68,9 +68,12 @@ Bias-variance tradeoff is when you optimize your model with the right balance be
 Review these examples of model that are underfitted, overfitted, and balanced.
 
 * **Underfitted:** In the underfitted example, the bias is high and the variance is low. Here the regression is a straight line. This shows us that the model is underfitting the data because it is not capturing all the features of the data.
+![Underfitted](./img/underfitted.png)
 
 * **Overfitted:** In the overfitted example, bias is low and the variance is high. Here the regression curve perfectly fits the data. This means that it is capturing noise and is essentially memorizing the data. It won't perform well on new data.
+![Overfitted](./img/overfitted.png)
 
 * **Balanced:** In the balanced example, the bias is low and the variance is low. Here the regression is a curve. This is what you want. Its capturing enough features of the data, without capturing noise.
+![Balanced](./img/balanced.png)
 
 To help overcome bias and variance errors, you can use the following:
