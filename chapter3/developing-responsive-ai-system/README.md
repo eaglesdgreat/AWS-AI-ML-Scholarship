@@ -50,11 +50,47 @@ Guardrails for Amazon Bedrock provides content filters with configurable thresho
 Guardrails for Amazon Bedrock helps you detect PII in user inputs and FM responses. Based on the use case, you can selectively reject inputs containing PII or redact PII in FM responses. For example, you can redact users’ personal information while generating summaries from customer and agent conversation transcripts in a call center.
 
 ## Bias detection
-
 SageMaker AI Clarify helps identify potential bias in machine learning models and datasets without the need for extensive coding. You specify input features, such as gender or age, and SageMaker AI Clarify runs an analysis job to detect potential bias in those features. SageMaker AI Clarify then provides a visual report with a description of the metrics and measurements of potential bias so that you can identify steps to remediate the bias.
 
 You can use Amazon SageMaker Data Wrangler to balance your data in cases of any imbalances. SageMaker Data Wrangler offers three balancing operators: random undersampling, random oversampling, and Synthetic Minority Oversampling Technique (SMOTE) to rebalance data in your unbalanced datasets.
 
 ## Model prediction explanation
-
 SageMaker AI Clarify is integrated with Amazon SageMaker AI Experiments to provide scores detailing which features contributed the most to your model prediction on a particular input for tabular, natural language processing (NLP), and computer vision models. For tabular datasets, SageMaker AI Clarify can also output an aggregated feature importance chart that provides insights into the overall prediction process of the model. These details can help determine if a particular model input has more influence than expected on overall model behavior.
+
+## Monitoring and human reviews
+* **Amazon SageMaker Model Monitor:** monitors the quality of SageMaker AI machine learning models in production. You can set up continuous monitoring with a real-time endpoint (or a batch transform job that runs regularly), or on-schedule monitoring for asynchronous batch transform jobs. With SageMaker Model Monitor, you can set alerts that notify you when there are deviations in the model quality. With early and proactive detection of these deviations, you can take corrective actions.
+
+* **Amazon Augmented AI (Amazon A2I)** is a service that helps build the workflows required for human review of ML predictions. Amazon A2I brings human review to all developers and removes the undifferentiated heavy lifting associated with building human review systems or managing large numbers of human reviewers.
+
+## Governance improvement
+
+SageMaker AI provides purpose-built governance tools to help you implement AI responsibly. These tools give you tighter control and visibility over your AI models. You can capture and share model information and stay informed on model behavior, like bias, all in one place.
+
+Governance tools include the following:
+
+* **Amazon SageMaker Role Manager:** With SageMaker Role Manager, administrators can define minimum permissions in minutes. 
+
+* **Amazon SageMaker Model Cards:** With SageMaker Model Cards, you can capture, retrieve, and share essential model information, such as intended uses, risk ratings, and training details, from conception to deployment. 
+
+* **Amazon SageMaker Model Dashboard:** With SageMaker Model Dashboard, you can keep your team informed on model behavior in production, all in one place.
+
+## Providing transparency
+AWS AI Service Cards are a new resource to help you better understand AWS AI services. AI Service Cards are a form of responsible AI documentation that provides a single place to find information on the intended use cases and limitations, responsible AI design choices, and deployment and performance optimization best practices for AWS AI services.
+
+They are part of a comprehensive development process to build AWS services in a responsible way that addresses the core dimensions of responsible AI.
+![Balanced](./img/aws-ai-model-card.png)
+
+Each AI Service Card contains four sections that cover the following:
+
+* Basic concepts to help customers better understand the service or service features
+
+* Intended use cases and limitations
+
+* Responsible AI design considerations
+
+* Guidance on deployment and performance optimization
+
+The content of the AI Service Cards addresses a broad audience of customers, technologists, researchers, and other stakeholders. This content helps these audiences better understand key considerations in the responsible design and use of an AI service.
+
+# Responsible Considerations to Select a Model
+
