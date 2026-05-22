@@ -78,7 +78,7 @@ Governance tools include the following:
 AWS AI Service Cards are a new resource to help you better understand AWS AI services. AI Service Cards are a form of responsible AI documentation that provides a single place to find information on the intended use cases and limitations, responsible AI design choices, and deployment and performance optimization best practices for AWS AI services.
 
 They are part of a comprehensive development process to build AWS services in a responsible way that addresses the core dimensions of responsible AI.
-![Balanced](./img/aws-ai-model-card.png)
+![AWS AI Model Card](./img/aws-ai-model-card.png)
 
 Each AI Service Card contains four sections that cover the following:
 
@@ -93,4 +93,147 @@ Each AI Service Card contains four sections that cover the following:
 The content of the AI Service Cards addresses a broad audience of customers, technologists, researchers, and other stakeholders. This content helps these audiences better understand key considerations in the responsible design and use of an AI service.
 
 # Responsible Considerations to Select a Model
+Selecting a model is one of the first and most critical steps to developing an AI system. Model selection has strategic implications for how the AI system will perform. Everything from user experience and go-to-market to hiring and profitability can be affected by selecting the right model for your use case. 
 
+Remember that you can use Model evaluation on Amazon Bedrock or SageMaker AI Clarify to evaluate models for accuracy, robustness, toxicity, or nuanced content that requires human judgement.
+
+## Define application use case narrowly
+When selecting a model for your AI application, you must narrowly define your use case. This is important because you can tune your model for that specific use case.
+
+**Example: Defining application use case narrowly for traditional AI**
+
+In this example, you might have an AI application that uses face recognition. Face recognition is not a use case; it is a technology. The way your model applies that technology is a use case. 
+
+![Gallery Retrieval](./img/gallery-retrieval.png)
+Gallery retrieval
+
+![Celebrity Recognition](./img/celebrity-recognition.png)
+Celebrity recognition
+
+![Virtual Proctoring](./img/virtual-proctoring.png)
+Virtual proctoring
+
+For example, a gallery retrieval application might be used to help find missing persons. In this case, you would need a model that can be tuned for favor recall or precision. Favor recall would bring up many results that could be beneficial to the use case of the AI application used in finding missing persons. 
+
+However, if your AI application is being used for celebrity recognition or virtual proctoring, the model would only need to favor precision. This is because the favor recall tuning would provide too many results to be beneficial to the use case of the application. 
+
+**Example: Defining application use case narrowly for generative AI**
+
+In this example, you might have an AI application to assist customers in shopping on your online store. The use case might be to provide a product catalog or to persuade customers to buy products. An appropriate model would need to be selected based on the narrowly defined use case
+
+| Features | Catalog a product	| Persuade to buy |
+|----------|--------------------|-----------------|
+| Target audience | Broad demographic	| Narrow demographic |
+| Possible issues | Veracity | Veracity, unwanted bias, toxicity, detail |
+| Consequences | Brand damage, lost sales, and returns | Representative harm, brand damage, lost sales, and returns |
+| Tuning | Favors neutrality, clarity, and completeness | Focuses on highest interest problem and benefit to group |
+
+In an AI application to catalog a product, you would want a broad demographic target audience so that it is available for all of your customers. 
+
+In an AI application to persuade to buy, you would want a narrow target audience to capture a specific group of people. For example, you might want to target an audience that lives on the coast to buy accessories for docking boats.
+
+## Choosing a model based on performance
+Model performance varies across a number of factors, including the following: 
+
+* Level of customization – The ability to change a model’s output with new data ranging from prompt-based approaches to full model retraining
+* Model size – The amount of information the model has learned as defined by parameter count
+* Inference options – From self-managed deployment to API calls
+* Licensing agreements – Some agreements can restrict or prohibit commercial use
+* Context windows – The amount of information that can fit in a single prompt
+* Latency – The amount of time it takes for a model to generate an output
+
+**Consider a model based on performance with test datasets**
+A common mistake when choosing a model is to assume that the model, in and of itself, is either good or bad. This is not the case. Performance is a function of the model and a test dataset, not just the model. So, when you are assessing a model, you need to determine how well a model performs on a particular dataset.
+
+![Performance](./img/performance.png)
+Model that performs differently on different datasets
+
+For example, a model might perform well on test dataset A over a period of time. The model might perform even better on test dataset B. However, the model might progressively get worst on test dataset C.
+
+This means that you need to consider two development trajectories: the development trajectory of the model and the development trajectory of the datasets. Remember the dataset is not necessarily constant. It is often evolving.
+
+## Choosing a model based on sustainability concerns
+Sustainability in the context of responsible AI refers to the ability of AI systems to be developed and deployed in a way that is socially, environmentally, and economically sustainable over the long term. 
+
+Responsible agency considerations for selecting a model
+
+Responsible agency in responsible AI refers to an AI system's capacity to make good judgments and act in a socially responsible manner. The following are key aspects of moral agency for AI.
+
+**Value alignment**
+Value alignment is being able to understand, evaluate, and make decisions based on moral principles rather than pure utility maximization. This requires value alignment between the AI system's goals and values and the responsible human values. 
+
+**Responsible reasoning skills**
+Responsible reasoning skills is being able to logically think through moral dilemmas and weigh various responsible considerations when making decisions. The AI needs logic and reasoning capabilities to apply responsible principles to novel situations. 
+
+The AI system should have the capacity to engage in responsible reasoning and understand moral concepts, principles, and frameworks. It should be able to apply them in context to specific situations.
+
+**Appropriate level of autonomy**
+The AI system should have the appropriate level of autonomy, with clear boundaries and mechanisms for human oversight and intervention, particularly in high-stakes or sensitive domains.
+
+**Transparency and accountability**
+The AI system should be transparent about its decision-making process. It should allow external oversight and accountability to ensure its actions are responsibly justified.
+
+Overall, responsible agency requires AI to have sophisticated intelligence on par with human-level cognition to properly apply ethical reasoning in the real world. This remains an immense challenge for current AI.
+
+**Environmental considerations for selecting a model**
+When you are developing and deploying AI systems, use environmental considerations as you implement responsible AI.
+The following are key environmental challenges and solutions to consider when choosing a model.
+
+**Energy consumption**
+| Challenge	                                     | Solution                             |
+|------------------------------------------------|--------------------------------------|
+| Training large AI models and running them at scale can consume significant amounts of energy and contribute to greenhouse gas emissions and environmental impact.              | The solution is to optimize energy efficiency in AI systems, use renewable energy sources where possible, and consider the overall carbon footprint of AI operations. |
+
+**Resources utilization**
+| Challenge	                                     | Solution                             |
+|------------------------------------------------|--------------------------------------|
+| AI systems often require substantial computational resources, including specialized hardware, such as GPUs and TPUs, and data center infrastructure. The manufacturing and disposal of these resources can have environmental impacts. | Responsible AI should aim to maximize resource efficiency, promote hardware reusability and recyclability, and minimize electronic waste. |
+
+**Environmental impact assessment**
+| Challenge	                                     | Solution                             |
+|------------------------------------------------|--------------------------------------|
+| Before deploying AI systems, it is important to assess their potential environmental impacts, both direct (for example, energy consumption and resource usage) and indirect (for example, enabling or promoting environmentally harmful activities). | Environmental impact assessments should be conducted, and mitigation strategies should be implemented if necessary. |
+
+**Economic considerations for selecting a model**
+Economic considerations in responsible AI include the potential benefits and costs of AI technologies and the impact on jobs and the economy. 
+
+For example, AI can automate certain tasks and improve efficiency, but it can also lead to job displacement and inequality. Additionally, there are concerns about the concentration of power and data in the hands of a few companies, which could lead to monopolies and further inequality.
+
+# Responsible Preparation for Datasets
+An essential requirement of responsible AI is to prepare your datasets responsibly. This means that you need to have balanced datasets to train your models. 
+
+Remember that you can use SageMaker AI Clarify and SageMaker Data Wrangler to help balance your datasets.
+
+## Balancing datasets
+Balanced datasets are important for creating responsible AI models that do not unfairly discriminate or exhibit unwanted biases. 
+
+Balanced datasets should represent all groups of people or data topics. This means that the dataset should contain an adequate number of examples or instances of each group to ensure that the model is not biased towards any particular group or factor. The concept of balanced datasets is particularly important in applications like hiring, lending, or criminal justice, where fairness and equity are essential.
+
+To achieve balanced datasets, the data collected needs to be inclusive and diverse, and the data also needs to be curated to optimize it for training.
+
+**Inclusive and diverse data collection**
+Inclusiveness and diversity in data collection ensure that data collection processes are fair and unbiased. Data collection should accurately reflect the diverse perspectives and experiences required for the use case of the AI system. This includes a diverse range of sources, viewpoints, and demographics. By doing this, the AI system can work to ensure decisions are unbiased in their performance.
+
+For example, if an ML model is trained primarily on data from middle-aged individuals, it might be less accurate when making predictions involving younger and older people. Therefore, the datasets should be collected so that age groups are equally represented.
+
+![People](./img/people.png)
+Example that shows bias towards middle-aged people
+
+Inclusiveness and diversity in data collection is a primary concern for data that focuses on people. This is because alienating groups of people in the training data can lead to societal harms and legal repercussions. However, inclusiveness and diversity in data collection should be a primary focus regardless of the topic. For example, collection of data for people, scientific research, geography, weather, products, and other topics should be collected with a focus on the diverse range for each topic.
+
+By promoting inclusiveness and diversity within AI, organizations can promote fairness, transparency, and accountability in their AI systems and contribute to the responsible development of AI technology.
+
+**Data curation**
+The second part of balancing the datasets involves curation of the datasets. Curating datasets is the process of labeling, organizing, and preprocessing the data so that it can perform accurately on the model. The curation can help to ensure that the data is representative of the problem at hand and free of biases or other issues that can impact the accuracy of the AI model. Curation helps to ensure that AI models are trained and evaluated on high-quality, reliable data that is relevant to the task they are intended to perform. 
+
+The main steps of curating data include data preprocessing, data augmentation, and regular auditing.
+
+* **Data preprocessing**
+Preprocess the data to ensure it is accurate, complete, and unbiased. Techniques such as data cleaning, normalization, and feature selection can help to eliminate biases in the dataset
+* **Data augmentation**
+Use data augmentation techniques to generate new instances of underrepresented groups. This can help to balance the dataset and prevent biases towards more represented groups.
+* **Regular auditing**
+Regularly audit the dataset to ensure it remains balanced and fair. Check for biases and take corrective actions if necessary.
+
+**Balance your data for the intended use case**
+The use case for the AI system will determine how the data needs to be balanced. For example, if you are creating an AI system about cancer in children, you would collect the data and curate it to focus on children and not include datasets on adults. 
