@@ -2,3 +2,4 @@
 
 * ## Introduction
 * ## Developing Responsive AI Systems
+* ## Transparent Explainable AI Model
