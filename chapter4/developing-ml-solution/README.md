@@ -114,3 +114,15 @@ We then moved on to feature engineering. We had features that answered questions
 * **Model deployment**
 We then deployed the model. It now helps customers get directed to the correct agent the first time.
 ![Model Development]('./img/model-development.png')
+
+
+# Developing ML Solutions with Amazon SageMaker AI
+## Amazon SageMaker AI
+Amazon SageMaker AI is a fully managed ML service. In a single unified visual interface, you can perform the following tasks:
+
+* Collect and prepare data.
+* Build and train machine learning models.
+* Deploy the models and monitor the performance of their predictions.
+
+The following diagrams introduce the various SageMaker AI features you can use in the machine learning lifecycle.
+To learn more, choose the START or arrow buttons to display each of the six categories.
