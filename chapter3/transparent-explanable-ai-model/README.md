@@ -112,7 +112,7 @@ An economist might want to build a multi-variate regression model to predict an 
 * **Explainability example**
 A news media outlet uses a neural network to assign categories to different articles. The news outlet cannot interpret the model in depth. However, they can use a model agnostic approach to evaluate the input article data compared to the model predictions. With this approach, they find that the model is assigning the sports category to business articles that mention sport organizations. Although the news outlet did not use model interpretability, they were still able to derive an explainable answer to reveal the model’s behavior.
 
-![Interpretability]('./img/interpretability.png')
+![Interpretability](./img/interpretability.png)
 Diagram that shows how a model's interpretability can affect performance.
 
 If a business wants high model transparency and wants to understand exactly why and how the model is generating predictions, then they need a model that offers interpretability. However, high interpretability typically comes at the cost of performance, as seen in the diagram. 
