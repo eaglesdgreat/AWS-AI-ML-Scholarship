@@ -242,3 +242,305 @@ To learn more about AWS CloudTrail, choose the following button.
 **AWS Trusted Advisor**
 To learn more about AWS Trusted Advisor, choose the following button.
 [Webpage](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+
+
+# Data Governance Strategies
+
+## Which data governance strategies are associated with AI?
+Data governance strategies
+
+Data governance strategies for AI and generative AI workloads involve an approach to managing the data lifecycle, from data collection and storage, to data usage and security. The following are some key data governance strategies that organizations can consider.
+
+**Data quality and integrity**
+To ensure the quality and integrity of your data, follow these steps:
+
+* Establish data quality standards and processes to ensure the accuracy, completeness, and consistency of data used for AI and generative AI models.
+
+* Implement data validation and cleansing techniques to identify and address data anomalies and inconsistencies.
+
+* Maintain data lineage and provenance to understand the origin, transformation, and usage of data.
+Data lineage and provenance are concepts that describe the origins, history, and transformations of data as it flows through an organization.
+
+**Data protection and privacy**
+To ensure data protection and privacy, implement the following steps:
+
+* Develop and enforce data privacy policies that protect sensitive or personal information.
+* Implement access controls, encryption, and other security measures to safeguard data from unauthorized access or misuse.
+* Establish data breach response and incident management procedures to mitigate the impact of any data security incidents.
+
+**Data lifecycle management**
+Some steps for data lifecycle management include the following:
+
+* Classify and catalog data assets based on their sensitivity, value, and criticality to the organization.
+* Implement data retention and disposition policies to ensure the appropriate storage, archiving, and deletion of data.
+* Develop data backup and recovery strategies to ensure business continuity and data resilience.
+
+**Responsible AI**
+Some steps to ensure responsible AI include the following:
+
+* Establish responsible frameworks and guidelines for the development and deployment of AI and generative AI models, addressing issues like bias, fairness, transparency, and accountability.
+
+* Implement processes to monitor and audit AI and generative AI models for potential biases, fairness issues, and unintended consequences.
+
+* Educate and train AI development teams on responsible AI practices.
+
+**Governance structures and roles**
+Follow these steps to establish governance structures and roles:
+
+* Establish a data governance council or committee to oversee the development and implementation of data governance policies and practices.
+
+* Define clear roles and responsibilities for data stewards, data owners, and data custodians to ensure accountable data management.
+
+* Provide training and support to artificial intelligence and machine learning (AI/ML) practitioners and data users on data governance best practices.
+
+**Data sharing and collaboration**
+You can manage data sharing and collaboration as follows:
+
+* Develop data sharing agreements and protocols to facilitate the secure and controlled exchange of data across organizational boundaries.
+
+* Implement data virtualization or federation techniques to enable access to distributed data sources without compromising data ownership or control.
+
+* Foster a culture of data-driven decision-making and collaborative data governance across the organization.
+
+## Concepts in data governance 
+
+Data management concepts
+
+The following concepts are all important considerations for the successful management and deployment of AI workloads. They help ensure the quality, integrity, and governance of the data that underpins the development, training, and deployment of AI models.
+
+**Data lifecycles**
+Data lifecycles refer to the management of data throughout its entire lifespan, from creation to eventual disposal or archiving. In the context of AI workloads, the data lifecycle encompasses the following stages in the lifecycle of data used to train and deploy AI models:
+
+* Collection
+* Processing
+* Storage
+* Consumption
+* Disposal or archiving
+
+**Data logging**
+Data logging involves the systematic recording of data related to the processing of an AI workload. This can include the following: 
+
+* Tracking inputs
+* Tracking outputs
+* Model performance metrics
+* System events
+
+Effective data logging is necessary for debugging, monitoring, and understanding the behavior of AI systems.
+
+**Data residency**
+Data residency refers to the physical location where data is stored and processed. In the context of AI workloads, data residency considerations might include the following:
+
+* Compliance with data privacy regulations
+* Data sovereignty requirements
+* Proximity of data to the compute resources used for training and inference
+
+**Data monitoring**
+Data monitoring involves the ongoing observation and analysis of data used in AI workloads. This can include the following: 
+
+* Monitoring data quality
+* Identifying anomalies (An anomaly is an unexpected data point that significantly deviates from the norm.)
+* Tracking data drift (Data drift is observed when the distribution of the input data changes over time.)
+
+Monitoring also helps to ensure that the data being used for training and inference remains relevant and representative.
+
+**Data analysis**
+Data analysis methods are used to understand the characteristics, patterns, and relationships within the data used for AI workloads.
+
+These methods help to gain insights into the data. They include the following: 
+
+* Statistical analysis
+* Data visualization
+* Exploratory data analysis (EDA): EDA is a task to discover patterns, understand relationships, validate assumptions, and identify anomalies in data.
+
+**Data retention**
+Data retention policies define how long data should be kept for AI workloads. This can be influenced by factors such as the following: 
+
+* Regulatory requirements
+* Maintaining historical data for model retraining
+* Cost of data storage
+
+Effective data retention strategies can help organizations manage the lifecycle of data used in their AI systems.
+
+## Additional resources
+**What is Data Governance?**
+For a general overview of how AWS implements data governance, choose the following button.
+[AWS Webpage](https://aws.amazon.com/what-is/data-governance/)
+
+**What is Machine Learning (ML) Governance?**
+For more information about ML governance, choose the following button.
+[AWS Webpage](https://aws.amazon.com/what-is/data-governance/#:~:text=safeguarding%20the%20data.-,What%20is%20machine%20learning%20(ML)%20governance%3F,-ML%20governance%20applies)
+
+
+# Approaches for Implementing Governance Strategies
+
+## Governance strategies 
+Approaches to governance strategies
+
+When working with generative AI solutions, it's important to establish and follow governance strategies to ensure responsible development and deployment. The following are some key approaches to consider.
+
+**Policies**
+Develop clear and comprehensive policies that outline the organization's approach to generative AI, including principles, guidelines, and responsible AI considerations. Here are some common characteristics of policies:
+
+* Policies should address areas such as data management, model training, output validation, safety, and human oversight.
+* Policies should also cover aspects like intellectual property, bias mitigation, and privacy protection.
+* Ensure these policies are regularly reviewed and updated to keep pace with evolving technology and regulatory requirements.
+
+**Review cadence**
+Implement a regular review process to assess the performance, safety, and responsible AI implications of the generative AI solutions. Here are some common tasks to include in the review process:
+
+* The review process could involve a combination of technical, legal, and responsible AI reviews at different stages of the development and deployment lifecycle.
+
+* Establish a clear timeline for these reviews, such as monthly, quarterly, or bi-annually, depending on the complexity and risk profile of the solutions.
+
+* Ensure that the review process includes diverse perspectives from stakeholders, including subject matter experts, legal and compliance teams, and end-users.
+
+**Review strategies**
+Develop comprehensive review strategies that cover both technical and non-technical aspects of the generative AI solutions. Here is some suggested guidance for a review strategy:
+
+* Technical reviews should focus on model performance, data quality, and the robustness of the underlying algorithms.
+
+* Non-technical reviews should assess the solutions' alignment with organizational policies, responsible AI principles, and regulatory requirements.
+
+* Incorporate testing and validation procedures to validate the outputs of the generative AI solutions before deployment.
+
+* Establish clear decision-making frameworks to determine when and how to intervene or modify the solutions based on the review findings.
+
+**Transparency standards**
+Commit to maintaining high standards of transparency in the development and deployment of generative AI solutions by ensuring the following:
+
+* Include publishing information about the AI models, their training data, and the key decisions made during the development process.
+
+* Provide clear and accessible documentation on the capabilities, limitations, and intended use cases of the generative AI solutions.
+
+* Establish channels for stakeholders, including end-users, to provide feedback and raise concerns about the solutions.
+
+**Team training requirements**
+Ensure that all team members involved in the development and deployment of generative AI solutions are adequately trained on relevant policies, guidelines, and best practices. Some suggestions for team training include the following:
+
+* Provide comprehensive training on bias mitigation, and responsible AI practices.
+* Encourage cross-functional collaboration and knowledge-sharing to foster a culture of responsible AI development.
+* Consider implementing ongoing training and certification programs to keep team members up to date with the latest advancements and regulatory changes.
+
+## Monitoring an AI system
+
+##### Monitoring
+Monitoring an AI system is necessary to ensure its performance, reliability, and compliance with the intended use case. Effective monitoring can help identify issues, optimize system performance, and maintain overall system health. 
+
+The following are some key aspects to consider when monitoring an AI system.
+
+**Performance metrics**
+Monitor the performance of the AI system by tracking metrics, such as the following:
+
+* *Model accuracy:* The proportion of correct predictions made by the model
+* *Precision:* The ratio of true positive predictions to the total number of positive predictions made by the model
+* *Recall:* The ratio of true positive predictions to the total number of actual positive instances in the data
+* *F1-score:* The harmonic mean of precision and recall, which provides a balanced measure of model performance
+* *Latency:* The time taken by the model to make a prediction, which is an important measure of a model's practical performance
+
+These metrics can help you assess the effectiveness of the AI model and identify areas for improvement.
+
+**Infrastructure monitoring**
+Monitor the underlying infrastructure that supports the AI system, including the following: 
+
+* Compute resources (for example, CPU, memory, GPU)
+* Network performance
+* Storage
+* System logs
+
+This can help you identify resource bottlenecks, capacity planning issues, and potential system failures.
+
+**Monitoring for bias and fairness**
+Regularly assess the AI system for potential biases and unfair outcomes, especially in sensitive domains such as healthcare, finance, and HR. This can help ensure the AI system is making fair and unbiased decisions.
+
+**Monitoring for compliance and responsible AI**
+Ensure the AI system's operations and outputs adhere to relevant regulations, industry standards, and responsible guidelines. Monitor for any potential violations or issues that could raise compliance or responsible AI concerns.
+
+## Generative AI Security Scoping Matrix 
+
+You can use the Generative AI Security Scoping Matrix to assist you with application security scoping efforts. This matrix summarizes the key security disciplines that you should consider based on your generative AI solution. Use the matrix to guide you in classifying your applications among the five defined generative AI scopes.
+
+To learn about each scope, see each of the following markers.
+
+**Scope 1: Consumer app**
+Your business consumes a public third-party generative AI service, either at no-cost or paid. At this scope, you don’t own or see the training data or the model, and you cannot modify or augment it. You invoke APIs or directly use the application according to the terms of service of the provider.
+
+*Example:* An employee interacts with a generative AI chat application to generate ideas for an upcoming marketing campaign.
+
+**Scope 2: Enterprise app**
+Your business uses a third-party enterprise application that has generative AI features embedded within, and a business relationship is established between your organization and the vendor.
+
+*Example:* You use a third-party enterprise scheduling application that has a generative AI capability embedded within to help draft meeting agendas.
+
+**Scope 3: Pre-trained models**
+Your business builds its own application using an existing third-party generative AI foundation model. You directly integrate it with your workload through an API.
+
+*Example:* You build an application to create a customer support chatbot that uses the Anthropic Claude foundation model through Amazon Bedrock APIs.
+
+**Scope 4: Fine-tuned models**
+Your business refines an existing third-party generative AI foundation model by fine-tuning it with data specific to your business. This generates a new, enhanced model that is specialized to your workload.
+
+*Example:* You build an application for your marketing teams that helps them build materials that are specific to your products and services. For this application you use an API to access a foundation model.
+
+**Scope 5: Self-trained models
+Your business builds and trains a generative AI model from scratch using data that you own or acquire. You own every aspect of the model.
+
+*Example:* Your business wants to create a model trained exclusively on deep, industry-specific data to license to companies in that industry, creating a completely novel LLM.
+
+![Scoping Matrix](./img/scoping-matrix.png)
+
+## Security disciplines
+The matrix provides guidance on how to apply the following security disciplines to each scope.
+
+**Governance and Cmpliance**
+Governance and compliance deals with the policies, procedures, and reporting needed to empower the business while minimizing risk. 
+
+The following are some examples:
+
+* Governance framework for developing AI services
+* Compliance monitoring and reporting processes
+
+Now that you have learned about governance and compliance, move on to the next tab to learn about legal and privacy.
+
+**Legal and Privacy**
+These are the specific regulatory, legal, and privacy requirements for using or creating generative AI solutions. 
+
+The following are some examples:
+
+* Is your data shared with other parties?
+* What is the source of the training data for the model?
+
+Now that you have learned about legal and privacy, move on to the next tab to learn about risk management
+
+**Risk Management**
+Risk management involves the identification of potential threats to generative AI solutions and recommended mitigations. 
+
+The following are some examples:
+
+* Insecure output handling
+* Sensitive information disclosure
+
+Now that you have learned about risk management, move on to the next tab to learn about controls and resilience.
+
+**Controls and Resilience**
+*Controls:* The implementation of security controls that are used to mitigate risk
+
+The following are some examples:
+
+* Control who can use specific foundation models.
+* Control access to inference endpoints.
+
+*Resilience:* How to architect generative AI solutions to maintain availability and meet business Service Level Agreements (SLAs)
+
+The following is an example:
+
+* Ensure each AWS service is available in your chosen AWS Region.
+
+## Additional resources
+
+**Securing Generative AI: An Introduction to the Generative AI Security Scoping Matrix**
+To learn more about the Generative AI Security Scoping Matrix and how to use it, choose the following button.
+[AWS Security Blog](https://aws.amazon.com/blogs/security/securing-generative-ai-an-introduction-to-the-generative-ai-security-scoping-matrix/)
+
+**Securing Generative AI: Applying Relevant Security Controls**
+This post discusses the considerations when implementing security controls to protect a generative AI application. To learn more, choose the following button.
+[AWS Security Blog](https://aws.amazon.com/blogs/security/securing-generative-ai-applying-relevant-security-controls/)
