@@ -2,3 +2,4 @@
 
 * ## Introduction
 * ## Applying Governance And Compliance For AI Systems
+* ## Securing AI Systems
