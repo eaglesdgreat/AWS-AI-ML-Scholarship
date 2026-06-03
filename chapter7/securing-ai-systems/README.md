@@ -1,131 +1,132 @@
-# Security, Compliance, and Governance for AI Solutions
+# Security and Privacy Considerations for AI Systems
 
-## Overview
+## Security considerations
 
-This document provides an original, detailed summary of core principles and practical practices for securing AI systems, covering threat models, data governance, model security, deployment hardening, compliance obligations, monitoring, and governance processes.
+In the context of AI and generative AI, there are a number of security tasks, such as threat detection, vulnerability management, infrastructure protection, prompt injection, and data encryption. Following is a description of each of these tasks.
 
-Use this README as a checklist and quick reference when designing, building, or operating AI systems in production.
+**Threat detection**
+To detect threats to your AI systems, do the following:
 
-## Key Concepts
+* Identify and monitor for potential security threats, such as malicious actors attempting to exploit vulnerabilities in AI systems or using generative AI for malicious purposes. The following are some examples:
+ - Generating fake content
+ - Manipulating data
+ - Automating attacks
 
-- **Threat modeling**: Identify assets (data, models, endpoints), adversaries (insider, external, supply-chain), attack surfaces (training data, model APIs, CI/CD) and likely attack vectors (poisoning, model extraction, inference-time adversarial attacks).
-- **Defense in depth**: Apply layered controls across data, model, infrastructure, and application layers rather than relying on a single mechanism.
-- **Least privilege**: Limit access to data, models, and deployment environments to the minimal set of users and services required.
-- **Privacy-by-design**: Minimize sensitive data collection, apply anonymization, and incorporate privacy-preserving techniques such as differential privacy when appropriate.
+* You can assist threat detection by developing and deploying AI-powered threat detection systems. You can analyze network traffic, user behavior, and other data sources to detect and respond to potential threats.
 
-## Data Governance
+For more information, see [Threat Detection](https://docs.aws.amazon.com/whitepapers/latest/aws-caf-for-ai/security-perspective-compliance-and-assurance-of-aiml-systems.html#threat-detection) and [Protect Against Adversarial and Malicious Activities](https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/mlsec-11.html).
 
-- Inventory data sources and classify sensitivity (public, internal, confidential, regulated).
-- Define clear ownership and stewardship for datasets and record provenance (who collected, transformations, labeling process).
-- Implement a data lifecycle policy: collection, storage, access, retention, archival, and deletion.
-- Use strong encryption at rest and in transit; manage keys via a centralized KMS.
-- Apply access controls and audit logging for dataset usage; enforce role-based access control (RBAC) and just-in-time access where possible.
+**Vulnerability management**
+To help manage vulnerability, do the following:
 
-Practical controls:
-- Data minimization: collect only necessary fields.
-- Synthetic or anonymized datasets for testing.
-- Secure labeling workflows to avoid injection of poisoned labels.
+* Identify and address vulnerabilities in AI and generative AI systems, including software bugs, model weaknesses, and potential attack vectors (for example, malware, viruses, and email attachments).
 
-## Model Security
+* Regularly conduct security assessments, penetration testing (attempt to find and exploit vulnerabilities), and code reviews to uncover and address vulnerabilities.
 
-Risks:
-- *Training-time attacks*: data poisoning, label flipping, backdoors.
-- *Model stealing and extraction*: attackers query a model to reconstruct functionality or parameters.
-- *Adversarial examples*: crafted inputs that cause incorrect predictions.
+* Implement robust patch management and update processes to ensure that AI systems are kept up to date and secure.
 
-Mitigations:
-- Validate and sanitize training data; use statistical checks and outlier detection on incoming records.
-- Use robust training techniques: regularization, data augmentation, adversarial training, and differential privacy where applicable.
-- Rate-limit and monitor inference endpoints to detect suspicious query patterns that indicate model extraction attempts.
-- Protect intellectual property with model watermarking, query-response auditing, and limiting verbose explanations.
+For more information, see [Vulnerability Management](https://docs.aws.amazon.com/whitepapers/latest/aws-caf-for-ai/security-perspective-compliance-and-assurance-of-aiml-systems.html#vulnerability-management).
 
-Model documentation:
-- Maintain `model cards` and `data sheets` documenting intended use, performance metrics, training data provenance, limitations, known biases, and failure modes.
+**Infrastructure protection**
+To ensure that your infrastructure is protected, do the following:
 
-## Secure Development & Deployment
+* Secure the underlying infrastructure that supports AI and generative AI systems, such as the following:
+ - Cloud computing platforms
+ - Edge devices
+ - Data stores
 
-- Integrate security into ML pipelines (MLOps): validate data, run unit and integration tests for model logic, include security checks in CI/CD.
-- Container hardening: use minimal base images, scan images for vulnerabilities, run containers with non-root users.
-- Secrets management: never store credentials or API keys in source control; use vaults or cloud secret managers.
-- Network segmentation and ingress controls: place inference services behind authenticated gateways, WAFs, and API gateways.
+* Implement strong access controls, network segmentation, encryption, and other security measures to protect the infrastructure from unauthorized access and attacks.
 
-CI/CD best practices:
-- Automate static analysis, dependency scanning, and model validation tests.
-- Require code and model reviews for production deployment.
-- Allow safe rollback and versioning for models and dataset snapshots.
+* Ensure that the AI infrastructure is resilient and can withstand failures, attacks, or other disruptions.
 
-## Compliance & Regulatory Considerations
+For more information, see [Infrastructure Protection](https://docs.aws.amazon.com/whitepapers/latest/aws-caf-for-ai/security-perspective-compliance-and-assurance-of-aiml-systems.html#infrastructure-protection).
 
-- Map regulatory requirements (GDPR, HIPAA, CCPA, sector-specific rules) to system features: data subject rights, data residency, consent, breach notifications.
-- Maintain audit trails for data access, model training runs, and production inferences where required.
-- Provide mechanisms for explainability and human oversight where regulations or risk assessments demand it.
+**Prompt injection**
+You need to mitigate the risk of prompt injection attacks. In these attacks, adversaries attempt to manipulate the input prompts of generative AI models to generate malicious or undesirable content. To reduce the risk, do the following:
 
-Privacy controls:
-- Implement data subject access request (DSAR) workflows and deletion mechanisms.
-- Use anonymization, pseudonymization, and differential privacy techniques depending on use case and regulatory needs.
+* Employ techniques, such as prompt filtering, sanitization, and validation, to ensure that the input prompts are safe and do not contain malicious content.
 
-## Monitoring, Detection & Incident Response
+* Develop robust models and training procedures that are resistant to prompt injection attacks.
 
-- Monitor model performance for concept drift, data drift, and sudden degradation in accuracy.
-- Log inputs and outputs (respecting privacy constraints) for post-incident analysis and reproducibility.
-- Implement anomaly detection on feature distributions and prediction patterns to detect poisoning or inference attacks.
-- Define an incident response plan for AI-specific incidents (model compromise, data breach, regulatory incident) including roles, communication channels, and rollback procedures.
+For more information, see [Protect Against Data Poisoning Threats](https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/mlsec-10.html).
 
-Key operational signals:
-- Latency and error rates for inference endpoints.
-- Statistical drift metrics (population stability index, KL divergence) for input features.
-- Unusual query volume or pattern changes indicating scraping/model extraction.
+**Data encryption**
+To protect the confidentiality and integrity of the data used to train and deploy AI and generative AI models, do the following:
 
-## Governance & Organizational Controls
+* Implement strong encryption mechanisms to secure both data at rest and data in transit. Data at rest refers to data that is stored on servers, in databases, or on local devices. Data in transit refers to data that is transmitted during communication between different components of the AI system.
 
-- Define roles: Data Owner, Model Owner, ML Engineer, Security Engineer, Privacy Officer, and legal/compliance stakeholders.
-- Establish policies covering model approval gates, risk assessment thresholds, and permitted use cases.
-- Require model documentation and risk assessments before production deployment.
-- Maintain a registry of models, versions, datasets, and deployment artifacts.
+* Ensure that the encryption keys are properly managed and protected from unauthorized access.
 
-Governance artifacts to maintain:
-- Model card
-- Data provenance record
-- Risk assessment and mitigation log
-- Deployment and rollback procedures
+For more information, see [Data Protection](https://docs.aws.amazon.com/whitepapers/latest/aws-caf-for-ai/security-perspective-compliance-and-assurance-of-aiml-systems.html#data-protection) and [Protect Sensitive Data Privacy](https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/mlsec-05.html).
 
-## Practical Checklists
+### The OWASP Top 10 for LLMs
+The Open Web Application Security Project (OWASP) Top 10 is the industry standard list of the top 10 vulnerabilities that can impact a generative AI LLM system. These vulnerabilities are as follows:
 
-- Pre-production checklist:
-	- Dataset classified and approved.
-	- Training data provenance recorded.
-	- Bias and fairness tests executed.
-	- Threat model and risk assessment completed.
-	- Secrets and credentials stored securely.
+1. **Prompt injection:** Malicious user inputs that can manipulate the behavior of a language model
 
-- Production checklist:
-	- Inference endpoints authenticated and rate-limited.
-	- Monitoring and alerting in place for drift and anomalies.
-	- Audit logging enabled for data access and model changes.
-	- Backup and rollback plans tested.
+2. **Insecure output handling:** Failure to properly sanitize or validate model outputs, leading to security vulnerabilities
 
-## Cheat Sheet — Quick Mitigations
+3. **Training data poisoning:** Introducing malicious data into a model's training set, causing it to learn harmful behaviors
 
-- Poisoning: validate data, retrain with clean holdout, use robust estimators.
-- Extraction: throttle queries, add noise to outputs, require authenticated access.
-- Adversarial examples: adversarial training, input preprocessing, sanitization.
-- Privacy: encrypt data, minimize retention, use privacy-preserving training.
+4. **Model denial of service:** Techniques that exploit vulnerabilities in a model's architecture to disrupt its availability
 
-## Suggested Tools & Libraries
+5. **Supply chain vulnerabilities:** Weaknesses in the software, hardware, or services used to build or deploy a model
 
-- Monitoring / observability: Evidently AI, WhyLabs, Seldon Alibi Detect, Prometheus + Grafana.
-- Privacy & secure compute: PySyft, Opacus (differential privacy), AWS Nitro Enclaves or GCP Confidential VMs.
-- CI/CD & scanning: Dependabot, Snyk, Trivy for container scanning.
+6. **Sensitive information disclosure:** Leakage of sensitive data through model outputs or other unintended channels
 
-## Further Reading
+7. **Insecure plugin design:** Flaws in the design or implementation of optional model components that can be exploited
 
-- Papers and resources on adversarial ML, model interpretability, privacy-preserving ML, and relevant regulations (GDPR, HIPAA).
-- Maintain a reading list in this repository for team onboarding and continuous learning.
+8. **Excessive agency:** Granting a model too much autonomy or capability, leading to unintended and potentially harmful actions
 
-## Next Steps
+9. **Overreliance:** Over-dependence on a model's capabilities, leading to over-trust and failure to properly audit its outputs
 
-- Use this README as a template for project-specific policies. Update the model card and risk assessment for each model in this chapter.
-- If you want, I can generate a template `MODEL_CARD.md`, a `DATA_PROVENANCE.md` checklist, and a one-page incident response playbook.
+10. **Model theft:** Unauthorized access or copying of a model's parameters or architecture, allowing for its reuse or misuse
 
----
-Generated: concise, original summary for chapter 7 security topics — tailored for practical engineering use.
+## Additional resources
+There are a number of resources that are helpful for addressing the overall security and privacy requirements of your AI systems. The following are a few that you might explore.
+
+**AWS Cloud Adoption Framework: Security Perspective**
+The security perspective helps you achieve the confidentiality, integrity, and availability of your data and cloud workloads. To learn more, choose the following button.
+[AWS Whitepaper](https://docs.aws.amazon.com/whitepapers/latest/aws-caf-security-perspective/aws-caf-security-perspective.html)
+
+**Mitre ATLAS**
+Adversarial Threat Landscape for Artificial-Intelligence Systems (ATLAS) is a knowledge base of adversary tactics and techniques. To learn more, choose the following button.
+[ATLAS Webpage](https://atlas.mitre.org/)
+
+**Addressing Open Worldwide Application Security Project (OWASP) Top 10 Risks**
+The OWASP Top 10 is a standard awareness document for developers and web application security. To learn how to address these risks within AWS, choose the following button.
+[Developer Article](https://aws.amazon.com/developer/application-security-performance/articles/addressing-owasp-top-10-risks/)
+
+**Architect Defense-in-Depth Security for Generative AI Applications Using the OWASP Top 10 for LLMs**
+This blog post provides a common mental model and framework to apply security best practices. To learn more, choose the following button.
+[AWS Blog](https://aws.amazon.com/blogs/machine-learning/architect-defense-in-depth-security-for-generative-ai-applications-using-the-owasp-top-10-for-llms/)
+
+
+# AWS Services and Features for Securing AI Systems
+
+## Using AWS services to secure your AI systems
+To learn more about reasons for securing an AI system, choose the START or arrow buttons to display each of the five slides.
+
+### Why you need to secure your AI systems
+Securing AI systems when using AWS services is important for several reasons.
+
+**Reason 1: AI models process sensitive data**
+First, AI models often process sensitive data, such as personal information, financial records, or proprietary business data. Failing to secure these systems can lead to data breaches, privacy violations, and potential legal and financial consequences.
+
+**Reason 2: AI Systems can be vulnerable to adversarial attacks**
+Additionally, AI systems can be vulnerable to adversarial attacks, where malicious actors attempt to manipulate the model's behavior or steal its intellectual property. Proper security measures, such as access controls, encryption, and monitoring, help protect against these threats.
+
+**Reason 3: Integration into critical applications and decision-making processes**
+Furthermore, as AI systems are increasingly integrated into critical applications and decision-making processes, ensuring their security and reliability is essential to maintain trust and prevent potentially harmful outcomes. By prioritizing security, organizations can use the power of AWS services while mitigating risks and protecting their AI investments.
+
+**Summary**
+Security is top priority at AWS, and all customers, regardless of size, benefit from the ongoing investment of AWS in its secure infrastructure and new offerings. For customers developing AI AWS workloads, security is an integral part of the overall AWS solution. Generative AI is a key player in scaling Foundation Models for realizing business outcomes and there are multiple ways to create a generative AI workload. Integrating security and privacy in all aspects of AI is critical for the overall success of business outcomes.
+
+#### The AWS Shared Responsibility Model
+Security and compliance is a shared responsibility between AWS and the customer. The shared model helps relieve the customer’s operational burden. AWS operates, manages, and controls the host operating system and virtualization layer down to the physical security of the facilities in which the service operates.
+
+The customer assumes responsibility and management of the guest operating system. This includes updates, security patches, and other associated application software, in addition to the configuration of the AWS provided security group firewall. 
+
+Customers should carefully consider the services they choose. Their responsibilities vary, depending on the services used, the integration of those services into their IT environment, and applicable laws and regulations. The nature of this shared responsibility also provides the flexibility and customer control that permits the deployment. 
+
+As shown in the following chart, this differentiation of responsibility is commonly referred to as security of the cloud compared to security in the cloud.
