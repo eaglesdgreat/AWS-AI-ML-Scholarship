@@ -130,3 +130,89 @@ The customer assumes responsibility and management of the guest operating system
 Customers should carefully consider the services they choose. Their responsibilities vary, depending on the services used, the integration of those services into their IT environment, and applicable laws and regulations. The nature of this shared responsibility also provides the flexibility and customer control that permits the deployment. 
 
 As shown in the following chart, this differentiation of responsibility is commonly referred to as security of the cloud compared to security in the cloud.
+
+To learn about the responsibilities of the customer and AWS, see each of the numbered below.
+
+**1. Customer**
+A customer's responsibility will be determined by the AWS Cloud services that a customer selects. This determines the amount of configuration work the customer must perform as part of their security responsibilities.
+
+**2. Customer responsibility**
+Customers are responsible for the following:
+
+* Customer data
+* Platform, applications, identity and access management
+* Operating system, network and firewall configuration
+* Client-side data encryption and data integrity authentication
+* Server-side encryption (including file system and data)
+* Networking traffic protection (including encryption, integrity, identity)
+
+**3. AWS responsibility**
+AWS is responsible for protecting the infrastructure that runs all of the services offered in the AWS Cloud. This infrastructure is composed of the hardware, software, networking, and facilities that run AWS Cloud services.
+
+**4. AWS software responsibility**
+AWS is responsible for software, including compute, storage, database, and networking.
+
+**5. AWS hardware responsibility**
+AWS is responsible for hardware and AWS Global Infrastructure, including Regions, Availability Zones, and edge locations.
+
+![Customer Data](./img/customer-data.png)
+
+## AWS services for securing AI systems 
+Defense in depth security
+
+Recall that the defense in depth was briefly described at the beginning of this course. The goal of this strategy is to provide multiple layers of security around your data and workloads. 
+
+If one layer is compromised, the other layers will isolate, slow down, or stop a threat actor. The multiple layers prevent the threat actor from moving laterally, escalating privileges, exfiltrating or manipulating data, and so on.
+
+![Defense In Depth](./img/defence-in-depth.png)
+
+**Getting started with defense in depth**
+There are four foundational AWS security services recommended for any workload, any customer, and any industry. You can realize benefits from implementing these deeply-integrated foundational security services, such as the following: 
+
+* Security Hub
+* AWS KMS
+* GuardDuty
+* AWS Shield Advanced
+
+Each service provides protection in one of the core security domains of incident response, data protection, threat detection, and network and application protection.  
+
+To learn more about the four foundational AWS security services, see each of the following below.
+
+- **AWS Security Hub**
+AWS Security Hub provides customers with a single dashboard to view all security findings, and to create and run automated playbooks.
+For more information, see [AWS Security Hub](https://aws.amazon.com/security-hub/).
+
+- **AWS KMS**
+AWS KMS encrypts data and gives customers the choice and control of using AWS managed keys or customer-managed keys to protect their data.
+For more information, see [AWS Key Management Service](https://aws.amazon.com/kms/).
+
+- **Amazon GuardDuty**
+Amazon GuardDuty is a threat detection service that monitors for suspicious activity and unauthorized behavior to protect AWS accounts, workloads, and data.
+For more information, see [Amazon Guard Duty](https://aws.amazon.com/guardduty/).
+
+- **AWS Shield Advanced**
+AWS Shield Advanced helps protect workloads against Distributed Denial of Service (DDoS) events. AWS Shield Advanced includes AWS WAF and AWS Firewall Manager.
+For more information, see [AWS Shield Features](https://aws.amazon.com/shield/features/).
+
+#### AWS security services
+AWS provides several services and features for securing AI systems. The following services are used to manage user identities and access to resources, identify and protect sensitive data, and guard your AI systems and applications.
+
+**Identify sensitive data before training models**
+Amazon Macie uses ML to automate sensitive data discovery at scale.
+
+You can use Amazon Macie to scan S3 buckets for personally identifiable information (PII), personal health information (PHI), financial information, and other sensitive data. You can determine whether you need to remove the data or whether it needs more security protections before training or fine-tuning models.
+
+You can also scan databases by extracting data to a data lake in Amazon S3 to then have Amazon Macie scan the database content.
+
+For more information, see the [Amazon Macie User Guide](https://docs.aws.amazon.com/macie/latest/user/what-is-macie.html).
+
+**Manage identities and access to AWS services and resources**
+With AWS Identity and Access Management (IAM), you can specify who or what can access services and resources in AWS. You can also centrally manage fine-grained permissions, and analyze access to refine permissions across AWS. Here are some IAM entities that you can create:
+
+- **IAM users and IAM user groups:** An IAM user is an entity that you create in AWS. The IAM user represents the human user or workload who uses the IAM user to interact with AWS. A user in AWS consists of a name and credentials. An IAM user group is a collection of IAM users. User groups let you specify permissions for multiple users, which can make it more convenient to manage the permissions for those users.
+
+- **IAM roles:** An IAM role is an IAM identity that you can create in your account that has specific permissions. An IAM role is similar to an IAM user, in that it is an AWS identity with permission policies that determine what the identity can and cannot do in AWS.
+
+- **IAM policies:** A policy is an entity that, when attached to an identity or resource, defines their permissions.
+
+For more information, see [AWS Identity and Access Management](https://aws.amazon.com/iam/) and the [AWS Identity and Access Management User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html).
