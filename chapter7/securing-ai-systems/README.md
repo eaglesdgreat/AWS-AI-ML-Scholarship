@@ -216,3 +216,34 @@ With AWS Identity and Access Management (IAM), you can specify who or what can a
 - **IAM policies:** A policy is an entity that, when attached to an identity or resource, defines their permissions.
 
 For more information, see [AWS Identity and Access Management](https://aws.amazon.com/iam/) and the [AWS Identity and Access Management User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html).
+
+**Limit access to your data, models, and outputs**
+Apply a policy of least privilege to training data, models, and applications using AWS IAM Identity Center and IAM Access Analyzer. Here are some other services you can use to limit access:
+
+- Explore further zero trust capabilities to add fine-grained access controls with AWS Verified Access and Amazon Verified Permissions. 
+
+- Use AWS Verified Access to further eliminate the costs, complexity and performance issues related to virtual private networks (VPNs). 
+
+You can use Amazon SageMaker Role Manager to build and manage persona-based IAM roles for common ML needs.
+
+Amazon SageMaker Role Manager provides three preconfigured role personas and predefined permissions for common ML activities. These role personas are as follows:
+
+- Data scientist persona
+
+- MLOps persona
+
+- SageMaker AI compute persona
+
+For more information, see the following resources:
+
+- [AWS IAM Identity Center](https://aws.amazon.com/iam/identity-center/)
+
+- [AWS IAM Access Analyzer](https://aws.amazon.com/iam/access-analyzer/)
+
+- [AWS Verified Access](https://aws.amazon.com/verified-access/)
+
+- [Amazon Verified Permissions](https://aws.amazon.com/verified-permissions/)
+
+- [Amazon SageMaker Role Manager](https://docs.aws.amazon.com/sagemaker/latest/dg/role-manager.html)
+
+- [Ensure Least Privilege Access](https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/mlsec-03.html)
