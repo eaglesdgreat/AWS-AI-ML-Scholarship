@@ -235,7 +235,6 @@ Amazon SageMaker Role Manager provides three preconfigured role personas and pre
 - SageMaker AI compute persona
 
 For more information, see the following resources:
-
 - [AWS IAM Identity Center](https://aws.amazon.com/iam/identity-center/)
 
 - [AWS IAM Access Analyzer](https://aws.amazon.com/iam/access-analyzer/)
@@ -247,3 +246,151 @@ For more information, see the following resources:
 - [Amazon SageMaker Role Manager](https://docs.aws.amazon.com/sagemaker/latest/dg/role-manager.html)
 
 - [Ensure Least Privilege Access](https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/mlsec-03.html)
+
+**Protect data from exfiltration (data theft) and manipulation**
+For strong controls over data ingress and egress from AI systems, you can define strict AWS Network Firewall and Amazon VPC policies. This will prevent the movement of data in and out of your VPCs and networks. Here are some more services you can use to control data entering and leaving your AI systems:
+
+- AWS Network Firewall supports deep packet inspection to decrypt, inspect, and re-encrypt inbound and outbound TLS traffic to protect data. Data destined for the internet, another VPC, or another subnet is supported.
+
+- Amazon Virtual Private Cloud (Amazon VPC) lets you launch AWS resources in a logically isolated virtual network that you've defined. This virtual network closely resembles a traditional network that you would operate in your own data center, with the benefits of using the scalable infrastructure of AWS.
+
+- You can use AWS PrivateLink to establish private connectivity from your Amazon VPC to Amazon Bedrock, without having to expose your VPC to internet traffic.
+
+For more information, see the following resources:
+- [AWS Network Firewall](https://aws.amazon.com/network-firewall/)
+
+- [Amazon Virtual Private Cloud](https://aws.amazon.com/vpc/)
+
+- [What is AWS PrivateLink?](https://docs.aws.amazon.com/vpc/latest/privatelink/what-is-privatelink.html)
+
+**Protect AI workloads with intelligent threat detection**
+In addition to Amazon GuardDuty, Amazon Inspector and Amazon Detective can help with intelligent threat detection. These services help identify suspicious activity such as AWS credential exfiltration (theft) and suspicious user API usage, including Amazon Bedrock and Amazon SageMaker AI APIs. Following is a brief description of Amazon Inspector and Amazon Detective:
+
+- Amazon Inspector is an automated vulnerability management service that continually scans AWS workloads for software vulnerabilities and unintended network exposure. 
+
+- Amazon Detective streamlines the investigative process and helps security teams conduct faster and more effective forensic investigations.
+
+For more information, see the following resources:
+- [Amazon Inspector](https://aws.amazon.com/inspector/)
+
+- [Amazon Detective](https://aws.amazon.com/detective/)
+
+**Automate incident response and compliance**
+By automating security tasks on AWS, you can be more secure by reducing human configuration errors. This gives your team more time to focus on other work critical to your business. Task automation makes it more convenient for your security team to work closely with developer and operations teams to create and deploy code faster and more securely. 
+
+For example, by employing technologies like ML, you can automatically and continuously discover, classify, and protect sensitive data in AWS. 
+
+You can also automate infrastructure and application security checks to continually enforce your security and compliance controls and help ensure confidentiality, integrity, and availability at all times.
+
+You can automate incident response and compliance with AWS services that you learned about earlier, such as the following:
+* AWS Security Hub
+* AWS Config
+* AWS Audit Manager
+* AWS Artifact
+
+**Defend your generative AI web applications and data**
+In addition to AWS Shield Advanced and AWS Firewall Manager, which you learned about earlier, you can also use AWS WAF to protect your web applications and data.
+
+AWS WAF helps you protect against common web exploits and bots that can affect availability, compromise security, or consume excessive resources. With AWS WAF you can do the following:
+* Filter web traffic.
+
+* Prevent account takeover fraud.
+
+* Use AWS WAF Bot Control to control pervasive bot traffic (such as scrapers, scanners, crawlers). Pervasive bot traffic can consume excess resources, skew metrics, cause downtime, or perform other undesired activities. For more information, see [AWS WAF Bot Control](https://docs.aws.amazon.com/waf/latest/developerguide/waf-bot-control.html).
+
+## Additional resources
+For more information about the Shared Responsibility Model and AWS cloud security in general, see the following resources.
+
+**Shared Responsibility Model**
+To learn more about the AWS Shared Responsibility Model, choose the following button.
+[AWS Webpage](https://aws.amazon.com/compliance/shared-responsibility-model/)
+
+**AWS Cloud Security**
+To learn more about AWS cloud security in detail, choose the following button.
+[AWS webpage](https://aws.amazon.com/security/)
+
+
+# Understanding Data and Model Lineage
+Data and model lineage refer to the detailed record of the origin, transformation, and evolution of data and models used in AI and generative AI systems. This information is important for understanding the origin, reliability, and potential biases or limitations of the data and models used in these systems.
+
+## What is source citation and data origins documentation?
+**Citing sources and documenting origins**
+
+Source citation and documenting data origins are essential tasks that contribute to securing your AI systems. These tasks help ensure the transparency, traceability, and accountability of the data and information used in the AI system. This is important for maintaining the integrity and trustworthiness of the system. These tasks involve providing information about the sources of the data used to train the generative AI model and the provenance of the data. Following is a description of source citation and how to document data origins.
+
+**Source Citation**
+Source citation in generative AI refers to the act of properly attributing and acknowledging the sources of the data used to train the model.
+
+It is necessary to identify the sources from which the training data was collected, such as the following: 
+
+- Datasets
+- Databases
+- Other sources
+
+In addition, it is necessary to identify any relevant licenses, terms of use, or permissions associated with the data.
+
+Accurate source citation helps users and stakeholders understand the origins of the information used to generate the AI-produced content. This prepares them to assess the reliability and trustworthiness of the output.
+
+Now that you have learned about source citation, move on to the next tab to learn about documenting data origins.
+
+**Documenting Data Origins**
+Documenting data origins in the context of generative AI involves providing detailed information about the provenance, or the place of origin of the data used to train the model.
+
+This includes the following:
+
+- Details about the data collection process
+- The methods used to curate and clean the data
+- Any preprocessing or transformations applied to the data
+
+Documenting the data origins is important for understanding the potential biases, limitations, or quality issues that might be present in the training data. This can ultimately impact the performance and reliability of the generative AI model.
+
+## Tools and techniques
+By implementing the following tools and techniques, generative AI systems can effectively document the sources and origins of the data used in their development. This promotes transparency, accountability, and reproducibility. The following describes some of the common techniques and tools.
+
+**Data Lineage**
+Data lineage is a technique used to track the history of data, including its origin, transformation, and movement through different systems.
+
+In the context of generative AI, data lineage can be used to document the journey of the training data, from its initial sources to the final model.
+
+This information can be used to provide detailed source citations and data origin documentation for transparency and reproducibility.
+
+**Cataloging**
+Cataloging involves the systematic organization and documentation of the datasets, models, and other resources used in the development of a generative AI system.
+
+A well-maintained catalog can serve as a comprehensive repository of information about the components of the AI system. In addition, this information can include sources, licenses, and metadata associated with the training data.
+
+Cataloging facilitates the effective management and communication of data origins and source citations to users and stakeholders.
+
+**Model Cards**
+Model cards are a standardized format for documenting the key details about an ML model, including its intended use, performance characteristics, and potential limitations.
+
+In the context of generative AI, model cards can be used to provide source citations and data origin documentation. This helps users understand the provenance (lineage) of the data used to train the model.
+
+Model cards can include details about the datasets used, their sources, licenses, and any known biases or quality issues in the training data.
+
+### Amazon SageMaker Model Cards 
+You can use Amazon SageMaker Model Cards to document critical details about your ML models in a single place for streamlined governance and reporting.
+
+![Model Card](./img/model-card.png)
+
+Model cards can catalog details, such as the intended use and risk rating of a model, training details and metrics, evaluation results and observations. It also catalogs additional call-outs such as considerations, recommendations, and custom information. By creating model cards, you can do the following:
+
+- Provide guidance on how a model should be used.
+
+- Support audit activities with detailed descriptions of model training and performance.
+
+- Communicate how a model is intended to support business goals.
+
+## Additional resources
+
+**Enforce Data Lineage**
+To learn how to implement a plan to enforce data lineage, choose the following button.
+[Documentation](https://docs.aws.amazon.com/wellarchitected/latest/machine-learning-lens/mlsec-06.html)
+
+**Data Protection**
+To learn how data protection is addressed within the AWS Cloud Adoption Framework for Artificial Intelligence, Machine Learning, and Generative AI, choose the following button.
+[AWS Whitepaper](https://docs.aws.amazon.com/whitepapers/latest/aws-caf-for-ai/security-perspective-compliance-and-assurance-of-aiml-systems.html#data-protection)
+
+**Amazon SageMaker Model Cards**
+To learn more about using Amazon SageMaker Model Cards to document critical details about your ML models, choose the following button. 
+[Developer Guide](https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html)
