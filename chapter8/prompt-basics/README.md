@@ -208,3 +208,146 @@ Prompt templates are predefined structures or formats that can be used to provid
 Prompt templates can help streamline the process of interacting with models, making it easier to integrate them into various applications and workflows.
 
 By following best practices and structuring prompts carefully, you can effectively unlock a model's full potential.
+
+## Scenario
+Given this new information, you can begin to modify the prompt from the scenario in the previous lessons.
+
+**Original prompt**
+*Prompt*
+Generate a market analysis report for a new product category.
+
+**Updated prompt**
+*Parameters*
+Temperature: 0.9
+Top p: 0.999
+Maximum length: 5,000
+
+*Prompt*
+Generate a comprehensive market analysis report for a new product category in the finance industry for an audience of small and medium-sized businesses (SMBs). Structure the report with the following sections:
+
+1. Executive Summary
+2. Industry Overview
+3. Target Audience Analysis
+4. Competitive Landscape
+5. Product Opportunity and Recommendations
+6. Financial Projections
+
+The tone should be professional and tailored to the target audience of SMBs.
+
+This updated prompt incorporates the following parameter settings and best practices:
+
+1. *Parameters* – The updated prompt has the parameters for temperature and top p set high. This will encourage the model to produce a more creative output that might include some points that you wouldn't necessarily think of. The maximum length parameter is also set at 5,000.
+
+2. *Include context* – The updated prompt clarifies that the company is in the finance industry, which helps the model tailor the analysis accordingly.
+
+3. *Use directives for the appropriate response type* – The prompt breaks down the market analysis report into specific sections, making it easier for the model to structure the output.
+
+By incorporating some of these best practices, the updated prompt provides more specific guidance to the generative model, increasing the likelihood of generating a high-quality, relevant, and well-structured market analysis report tailored to the finance industry.
+
+
+# Prompt Engineering Techniques
+In the previous lessons, you learned the fundamentals of understanding prompts and how to modify them using best practices. Some of the best practices covered in the previous lesson influenced the common prompt engineering techniques you will discover in this lesson. Using these prompt engineering techniques can help you use generative models most effectively for your unique objectives.
+
+## Zero-shot prompting
+Zero-shot prompting is a technique where a user presents a task to a generative model without providing any examples or explicit training for that specific task. In this approach, the user relies on the model's general knowledge and capabilities to understand and carry out the task without any prior exposure, or shots, of similar tasks. Remarkably, modern FMs have demonstrated impressive zero-shot performance, effectively tackling tasks that they were not explicitly trained for.
+
+To optimize zero-shot prompting, consider the following tips:
+
+* The larger and more capable the FM, the higher the likelihood of obtaining effective results from zero-shot prompts.
+
+* Instruction tuning, a process of fine-tuning models to better align with human preferences, can enhance zero-shot learning capabilities. One approach to scale instruction tuning is through reinforcement learning from human feedback (RLHF), where the model is iteratively trained based on human evaluations of its outputs.
+
+The following is an example of a zero-shot prompt and resulting output.
+
+**Zero-shot prompt**
+Prompt:
+Tell me the sentiment of the following social media post and categorize it as positive, negative, or neutral: Positive
+
+Huge shout out to the amazing team at AnyCompany! Your top-notch customer service continues to blow me away. Proud to be a loyal customer!
+
+Output:
+Positive
+
+*Note:* This prompt did not provide any examples to the model. However, the model was still effective in deciphering the task.
+
+## Few-shot prompting
+Few-shot prompting is a technique that involves providing a language model with contextual examples to guide its understanding and expected output for a specific task. In this approach, you supplement the prompt with sample inputs and their corresponding desired outputs, effectively giving the model a few shots or demonstrations to condition it for the requested task. Although few-shot prompting provides a model with multiple examples, you can also use single-shot or one-shot prompting by providing just one example.
+
+When employing a few-shot prompting technique, consider the following tips:
+
+* Make sure to select examples that are representative of the task that you want the model to perform and cover a diverse range of inputs and outputs. Additionally, aim to use clear and concise examples that accurately demonstrate the desired behavior.
+
+* Experiment with the number of examples. The optimal number of examples to include in a few-shot prompt can vary depending on the task, the model, and the complexity of the examples themselves. Generally, providing more examples can help the model better understand the task. But too many examples might introduce noise or confusion.
+
+The following is an example of a few-shot prompt and resulting output.
+
+**Few-shot prompt**
+Prompt:
+Tell me the sentiment of the following news headline and categorize it as positive, negative, or neutral. Here are some examples:
+
+Investment firm fends off allegations of corruption
+Answer: Negative
+
+Local teacher awarded with national prize
+Answer: Positive
+
+Community organization exceeds fundraising goal, to provide meals for thousands in need 
+Answer: Positive
+
+Output:
+Positive
+
+## Chain-of-thought prompting
+Chain-of-thought (CoT) prompting is a technique that divides intricate reasoning tasks into smaller, intermediary steps. This approach can be employed using either zero-shot or few-shot prompting techniques.  CoT prompts are tailored to specific problem types. To initiate the chain-of-thought reasoning process in a machine learning model, you can use the phrase "Think step by step." It is recommended to use CoT prompting when the task requires multiple steps or a series of logical reasoning.
+
+The following are examples of CoT prompts using both zero-shot and few-shot techniques.
+
+**CoT using zero-shot**
+Prompt:
+Which service requires a larger deposit based on the following information?
+
+The total cost of service A is $50,000, and it requires a 30 percent deposit.
+
+The total cost of service B is $40,000, and it requires a 40 percent deposit.
+
+Think step by step.
+
+Output:
+The deposit for service A is 30 percent of $50,000, which is
+0.3 * 50,000 = $15,000
+
+The deposit for service B is 40 percent of $40,000, which is
+0.4 * 40,000 = $16,000
+
+Therefore, based on the given information, service B requires a larger deposit.
+
+**CoT using few-shot**
+Prompt:
+Question: If there are 2 bags with 3 oranges each, how many oranges are there in total?
+Answer: 2 bags, 3 oranges each. 2 * 3 = 6 oranges.
+
+Question: If there are 4 cars with 2 passengers each, how many passengers are there in total?
+Answer: 4 cars, 2 passengers each. 4 * 2 = 8 passengers.
+
+Question: If there are 3 baskets, and each basket has 5 apples, how many apples are there in total?
+Answer: (Think step by step.)
+
+Output:
+Answer: 3 baskets, 5 apples each. 3 * 5 = 15 apples.
+
+## Scenario
+Consider the scenario used throughout this course. Suppose that you have a market analysis report template. You also have a few market analysis reports for other new products that your organization has launched. You can use the few-shot prompt technique by including your organization's template and example market analysis reports.
+
+The resulting prompt might look something like this:
+
+**Updated scenario prompt using few-shot prompting**
+Prompt:
+Generate a comprehensive market analysis report for a new product category in the finance industry. The target audience is small and medium-sized businesses (SMBs). Use the attached template to structure the report into categories. [attach report template]
+
+The following examples are market analysis reports for previously released products.
+
+Example 1: [insert example market analysis report]
+
+Example 2: [insert example market analysis report]
+
+This prompt now includes a report template that will guide the model to structure the output correctly. The prompt also includes two example market analysis reports as additional context.
